@@ -1,6 +1,6 @@
 #include <open.mp>
 
-public OnPlayerConnect(playerId) {
+public OnPlayerConnect(playerid) {
     print("hi!");
     return 1;
 }
