@@ -1,0 +1,14 @@
+name: Run
+on: [push, workflow_dispatch]
+jobs:
+  run:
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+
+      - name: Run
+        run: |
+          for src in src/*; do
+            ./pawncc -d3 -i"inc" "$src"
+          done
