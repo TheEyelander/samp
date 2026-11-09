@@ -1,3 +1,6 @@
+#include <console>
 #include <omp_player>
 
-public OnPlayerConnect(playerid) {}
+public OnPlayerConnect(playerId) {
+    return 1;
+}
