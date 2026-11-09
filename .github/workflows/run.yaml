@@ -9,7 +9,15 @@ jobs:
 
       - name: Run
         run: |
+          export LD_LIBRARY_PATH=.
           chmod +x pawncc
-          for src in src/*; do
-            LD_LIBRARY_PATH=. ./pawncc -d3 -i"inc" "$src"
+
+          for src in src/*.pwn; do
+            ./pawncc -d3 -i"inc" "$src"
           done
+
+      - name: Upload
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: amx
+          path: "*.amx"
