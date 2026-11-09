@@ -10,8 +10,8 @@ jobs:
       - name: Compile
         run: |
           chmod +x pawncc
-          for src in src/*.pwn; do
-            ./pawncc -iinc -d3 "$src"
+          for file in sources/*.pwn; do
+            ./pawncc -iincludes -d3 "$file"
           done
 
       - name: Upload

@@ -1,4 +1,4 @@
-#include <console>
+#include <omp_core>
 
 main() {
     print("\n----------------------------------");
