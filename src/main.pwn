@@ -1,4 +1,4 @@
-#include "console.inc"
+#include <console>
 
 main() {
     print("\n----------------------------------");
