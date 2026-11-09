@@ -1,13 +1,13 @@
-name: Run
+name: Compile
 on: [push, workflow_dispatch]
 jobs:
-  run:
+  compile:
     runs-on: ubuntu-26.04
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
 
-      - name: Run
+      - name: Compile
         run: |
           chmod +x pawncc
           for src in src/*.pwn; do
