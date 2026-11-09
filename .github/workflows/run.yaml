@@ -9,7 +9,6 @@ jobs:
 
       - name: Run
         run: |
-          chmod +x pawncc
           ./pawncc -iinc -d3 src/main.pwn
 
       - name: Upload
