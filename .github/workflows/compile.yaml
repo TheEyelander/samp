@@ -8,7 +8,7 @@ jobs:
         uses: actions/checkout@v7.0.1
 
       - name: Set up
-        run: curl -fsSL https://github.com/openmultiplayer/compiler/releases/download/v3.10.11/pawnc-3.10.11-linux.tar.gz | tar -xz -f - pawnc-3.10.11-linux/bin/pawncc /pawnc-3.10.11-linux/lib/libpawnc.so
+        run: curl -fsSL https://github.com/openmultiplayer/compiler/releases/download/v3.10.11/pawnc-3.10.11-linux.tar.gz | tar -xz -f - --strip-components=2
 
       - name: Compile
         run: |
