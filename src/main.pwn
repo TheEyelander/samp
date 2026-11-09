@@ -1,4 +1,4 @@
-#include <open.mp>
+#include "console.inc"
 
 main() {
     print("\n----------------------------------");
