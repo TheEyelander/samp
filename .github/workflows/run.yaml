@@ -12,12 +12,10 @@ jobs:
           export LD_LIBRARY_PATH=.
           chmod +x pawncc
 
-          for src in src/*.pwn; do
-            ./pawncc -d3 -i"inc" "$src"
-          done
+          ./pawncc -d3 -i"inc" main.pwn
 
       - name: Upload
         uses: actions/upload-artifact@v7.0.2
         with:
-          name: amx
-          path: "*.amx"
+          archive: false
+          path: main.amx
