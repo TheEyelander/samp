@@ -9,9 +9,7 @@ jobs:
 
       - name: Run
         run: |
-          export LD_LIBRARY_PATH=.
           chmod +x pawncc
-
           ./pawncc -iinc -d3 src/main.pwn
 
       - name: Upload
