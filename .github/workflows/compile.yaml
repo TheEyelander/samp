@@ -10,9 +10,7 @@ jobs:
       - name: Compile
         run: |
           chmod +x pawncc
-          for file in sources/*.pwn; do
-            ./pawncc -iincludes -d3 "$file"
-          done
+          find sources -type f -exec ./pawncc -iincludes -d3 {} \;
 
       - name: Upload
         uses: actions/upload-artifact@v7.0.2
