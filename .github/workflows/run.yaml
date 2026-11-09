@@ -9,10 +9,13 @@ jobs:
 
       - name: Run
         run: |
-          ./pawncc -iinc -d3 src/main.pwn
+          chmod +x pawncc
+          for src in src/*.pwn; do
+            ./pawncc -iinc -d3 "$src"
+          done
 
       - name: Upload
         uses: actions/upload-artifact@v7.0.2
         with:
-          archive: false
-          path: main.amx
+          name: gamemodes
+          path: "*.amx"
