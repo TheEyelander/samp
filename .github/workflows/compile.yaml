@@ -10,10 +10,10 @@ jobs:
       - name: Compile
         run: |
           chmod +x pawncc
-          find sources -type f -exec ./pawncc -iincludes -ogamemodes -d3 {} \;
+          find sources -type f -exec ./pawncc -iincludes -d3 {} \;
 
       - name: Upload
         uses: actions/upload-artifact@v7.0.2
         with:
           name: gamemodes
-          path: gamemodes
+          path: "*.amx"
