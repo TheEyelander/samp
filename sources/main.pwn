@@ -1,3 +1,3 @@
-#include <omp_core>
+#include <omp_player>
 
-public OnGameModeInit() {}
+public OnPlayerConnect(playerid) {}
