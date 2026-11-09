@@ -9,6 +9,7 @@ jobs:
 
       - name: Run
         run: |
+          chmod +x pawncc
           for src in src/*; do
             ./pawncc -d3 -i"inc" "$src"
           done
