@@ -1,5 +1,4 @@
-#include <console>
-#include <omp_player>
+#include <open.mp>
 
 public OnPlayerConnect(playerId) {
     print("hi!");
