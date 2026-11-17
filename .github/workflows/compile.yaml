@@ -8,12 +8,12 @@ jobs:
         uses: actions/checkout@v7.0.1
 
       - name: Set up
-        run: curl -fsSL https://github.com/openmultiplayer/compiler/releases/download/v3.10.11/pawnc-3.10.11-linux.tar.gz | tar -xz -f - --strip-components=2
+        run: |
+          curl -fsSL https://github.com/openmultiplayer/compiler/releases/download/v3.10.11/pawnc-3.10.11-linux.tar.gz | tar -xz -f - --strip-components=2
+          chmod +x pawncc
 
       - name: Compile
-        run: |
-          chmod +x pawncc
-          find sources -type f -exec ./pawncc -iincludes -d3 {} \;
+        run: find sources -type f -exec ./pawncc -iincludes -d3 {} \;
 
       - name: Upload
         uses: actions/upload-artifact@v7.0.2
