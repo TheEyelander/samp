@@ -17,5 +17,5 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v7.0.2
         with:
-          name: gamemodes
+          name: compiled
           path: "*.amx"
